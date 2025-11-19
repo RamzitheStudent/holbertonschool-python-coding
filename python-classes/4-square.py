@@ -6,7 +6,7 @@ class Square:
     """Represents a square."""
 
     def __init__(self, size=0):
-        """Initialize the square with an optional size.
+        """Initialize the square.
 
         Args:
             size (int): The size of the square.
@@ -15,12 +15,12 @@ class Square:
 
     @property
     def size(self):
-        """Retrieve the size of the square."""
+        """Retrieve the size."""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Set the size of the square with validation.
+        """Set the size with validation.
 
         Args:
             value (int): The new size of the square.
@@ -40,5 +40,10 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        """Print the square with the # character."""
+        """Print the square with the character #."""
         if self.__size == 0:
+            print("")
+            return
+
+        for _ in range(self.__size):
+            print("#" * self.__size)
